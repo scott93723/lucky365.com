@@ -1,1 +1,1 @@
-https://scott93723.github.io/kia_hong.com/
+https://scott93723.github.io/lucky365.com/
