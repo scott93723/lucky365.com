@@ -1,196 +1,879 @@
 <!DOCTYPE html>
-<html  >
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.10.7, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta name="google-site-verification" content="P-6XJyp63erlP_bmwIg5NUwRBc6krRsygUAFWlQz6AA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="P-6XJyp63erlP_bmwIg5NUwRBc6krRsygUAFWlQz6AA">
+  <meta name="description" content="立隆禮品 x 水族館，位於台北市文山區興隆路一段15號，提供工藝品、玩偶、資材、人造花與水族用品，週二至週日營業。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="立隆禮品 x 水族館｜Cyberpunk 2077 Edition">
+  <meta property="og:description" content="地表最強禮品店＋北市最精美水族館，超親切林老闆為您服務。">
+  <meta property="og:image" content="assets/images/3.jpg">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="theme-color" content="#0a0a0f">
   <link rel="shortcut icon" href="assets/images/main.JPG" type="image/x-icon">
-  <meta name="description" content="立隆禮品 地址：台北花木批發市場 G5 立隆禮品。電話：02-8663 7281">
+  <title>立隆禮品 x 水族館</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg-soft: #10111a;
+      --panel: rgba(16, 17, 26, 0.78);
+      --yellow: #fcee09;
+      --magenta: #ff003c;
+      --cyan: #00f0ff;
+      --text: #f5f7ff;
+      --muted: #aab3c5;
+      --border: rgba(0, 240, 255, 0.24);
+      --shadow-yellow: 0 0 24px rgba(252, 238, 9, 0.28);
+      --shadow-cyan: 0 0 30px rgba(0, 240, 255, 0.22);
+      --max: 1200px;
+    }
 
-  <title>立隆禮品 x 水族館 </title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
 
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 0, 60, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(0, 240, 255, 0.12), transparent 26%),
+        linear-gradient(180deg, #0a0a0f 0%, #090910 42%, #06070c 100%);
+      font-family: "Noto Sans TC", sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+    }
 
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.035) 0,
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      opacity: 0.18;
+      mix-blend-mode: screen;
+      z-index: 999;
+    }
+
+    a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    a:hover { color: var(--cyan); }
+
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(10, 10, 15, 0.76);
+      border-bottom: 1px solid rgba(252, 238, 9, 0.18);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: cover;
+      border: 1px solid rgba(0, 240, 255, 0.55);
+      box-shadow: var(--shadow-cyan);
+      clip-path: polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%);
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .eyebrow,
+    .nav-links a,
+    .pill,
+    .counter-label,
+    .footer-mark,
+    .section-tag,
+    .hero-kicker {
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.78rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .brand-title {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: var(--text);
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      width: 40vw;
+      height: 40vw;
+      filter: blur(40px);
+      opacity: 0.16;
+      z-index: -1;
+    }
+
+    .hero::before {
+      top: -10vw;
+      right: -6vw;
+      background: var(--cyan);
+    }
+
+    .hero::after {
+      bottom: -10vw;
+      left: -10vw;
+      background: var(--magenta);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 2rem;
+      padding: 5rem 0 3rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.78rem;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+
+    .hero-kicker::before {
+      content: "";
+      width: 3rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--yellow));
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .hero-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(2.4rem, 7vw, 6rem);
+      font-weight: 800;
+      color: var(--text);
+      text-transform: uppercase;
+      text-shadow:
+        -2px 0 rgba(255, 0, 60, 0.7),
+        2px 0 rgba(0, 240, 255, 0.75),
+        0 0 24px rgba(252, 238, 9, 0.18);
+    }
+
+    .glitch {
+      position: relative;
+      display: inline-block;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.72;
+    }
+
+    .glitch::before {
+      color: var(--cyan);
+      transform: translate(2px, -1px);
+      clip-path: polygon(0 2%, 100% 0, 100% 42%, 0 36%);
+      animation: glitchA 2.6s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      color: var(--magenta);
+      transform: translate(-2px, 1px);
+      clip-path: polygon(0 60%, 100% 52%, 100% 100%, 0 100%);
+      animation: glitchB 1.9s infinite linear alternate-reverse;
+    }
+
+    .hero-subtitle {
+      margin-top: 1.2rem;
+      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+      color: var(--text);
+      max-width: 44rem;
+    }
+
+    .hero-subtitle strong {
+      color: var(--yellow);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0.8rem 1.25rem;
+      border: 1px solid transparent;
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #090909;
+      box-shadow: var(--shadow-yellow);
+    }
+
+    .btn-secondary {
+      border-color: rgba(0, 240, 255, 0.48);
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.08);
+      box-shadow: var(--shadow-cyan);
+    }
+
+    .hero-panel,
+    .panel,
+    .link-card,
+    .gallery-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-cyan);
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before,
+    .panel::before,
+    .link-card::before,
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(252, 238, 9, 0.08), transparent 35%, rgba(0, 240, 255, 0.08));
+      pointer-events: none;
+    }
+
+    .hero-panel {
+      padding: 1.4rem;
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+    }
+
+    .status-grid {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .status-card {
+      padding: 1rem;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid var(--yellow);
+    }
+
+    .status-card:nth-child(2) { border-left-color: var(--cyan); }
+    .status-card:nth-child(3) { border-left-color: var(--magenta); }
+
+    .status-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .status-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    section { padding: 4rem 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      flex-wrap: wrap;
+    }
+
+    .section-tag {
+      color: var(--cyan);
+      font-size: 0.75rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .section-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      color: var(--yellow);
+      text-shadow: 0 0 18px rgba(252, 238, 9, 0.14);
+    }
+
+    .section-copy {
+      max-width: 38rem;
+      color: var(--muted);
+    }
+
+    .service-grid,
+    .info-grid,
+    .link-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .panel {
+      padding: 1.3rem;
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+    }
+
+    .panel h3 {
+      font-family: "Orbitron", sans-serif;
+      color: var(--text);
+      margin-bottom: 0.7rem;
+      font-size: 1.05rem;
+    }
+
+    .panel p,
+    .panel li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .accent {
+      color: var(--yellow);
+      font-weight: 700;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .gallery-card {
+      padding: 0.9rem;
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+    }
+
+    .gallery-card img {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gallery-card span {
+      display: block;
+      margin-top: 0.75rem;
+      color: var(--cyan);
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .info-grid {
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: stretch;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      padding: 1rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--yellow);
+      margin-bottom: 0.4rem;
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .map-frame {
+      width: 100%;
+      min-height: 100%;
+      border: 0;
+      border-radius: 0;
+      aspect-ratio: 4 / 3;
+      filter: grayscale(0.3) contrast(1.08) saturate(1.05);
+    }
+
+    .link-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .link-card {
+      padding: 1.2rem;
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(252, 238, 9, 0.55);
+    }
+
+    .link-card h3 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.55rem;
+    }
+
+    .link-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .footer {
+      padding: 2.2rem 0 3rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-mark {
+      color: var(--yellow);
+      font-size: 0.8rem;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .counter {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.8rem 1rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(252, 238, 9, 0.24);
+      background: rgba(252, 238, 9, 0.06);
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+
+    .counter-label {
+      color: var(--yellow);
+      font-size: 0.75rem;
+    }
+
+    .counter-value {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes glitchA {
+      0%, 100% { transform: translate(2px, -1px); }
+      20% { transform: translate(-1px, 2px); }
+      40% { transform: translate(3px, 1px); }
+      60% { transform: translate(-2px, -1px); }
+      80% { transform: translate(1px, 2px); }
+    }
+
+    @keyframes glitchB {
+      0%, 100% { transform: translate(-2px, 1px); }
+      20% { transform: translate(2px, -2px); }
+      40% { transform: translate(-3px, 1px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(-1px, -1px); }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .info-grid,
+      .service-grid,
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(calc(100% - 1.2rem), var(--max));
+      }
+
+      .hero-grid {
+        padding-top: 4rem;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.1rem, 14vw, 3.6rem);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn { width: 100%; }
+
+      .panel,
+      .hero-panel,
+      .gallery-card,
+      .link-card {
+        padding: 1rem;
+      }
+
+      section { padding: 3.2rem 0; }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section class="menu cid-rznI5aCAdr" once="menu" id="menu1-6">
-
-
-
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="#top">
-                         <img src="assets/images/3.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-5" href="#top">地表最強禮品店＋北市最精美水族館&nbsp;<br></a></span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-        </div>
-    </nav>
-</section>
-
-<section class="engine"><a href="https://mobirise.info/m">free web design templates</a></section><section class="cid-rzaUM99NaS mbr-fullscreen mbr-parallax-background" id="header2-1">
-
-
-
-    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(35, 35, 35);"></div>
-
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
-            <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">超溫馨水族館<br>&nbsp;</h1>
-            </div>
-        </div>
-    </div>
-    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        <a href="#top" aria-label="回到首頁">
+          <img src="assets/images/3.jpg" alt="立隆禮品 x 水族館">
         </a>
-    </div>
-</section>
-
-<section class="mbr-section content4 cid-rzzcCAtlOX" id="content4-b">
-
-
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="title col-12 col-md-8">
-                <h2 class="align-center pb-3 mbr-fonts-style display-2">各式工藝品,玩偶,資材,人造花,水族  &nbsp;</h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5"><strong>超親切的林老闆為您服務！</strong></h3>
-
-            </div>
+        <div class="brand-copy">
+          <div class="eyebrow">Lucky365 // System Active</div>
+          <div class="brand-title">地表最強禮品店＋北市最精美水族館</div>
         </div>
+      </div>
+      <nav class="nav-links" aria-label="主選單">
+        <a href="#services">商品服務</a>
+        <a href="#gallery">現場實景</a>
+        <a href="#info">店鋪資訊</a>
+        <a href="#links">延伸連結</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<section class="mbr-section article content9 cid-rzzdr4wmVG" id="content9-c">
-
-
-
-    <div class="container">
-        <div class="inner-container" style="width: 100%;">
-            <hr class="line" style="width: 82%;">
-            <div class="section-text align-center mbr-fonts-style display-5"><strong>台北花市最強水族館</strong></div>
-            <hr class="line" style="width: 82%;">
-        </div>
-        </div>
-</section>
-
-<section class="cid-rzzp61qw19" id="image4-9">
-    <!-- Block parameters controls (Blue "Gear" panel) -->
-
-    <!-- End block parameters -->
-    <div class="container images-container">
-            <div class="media-container-row" style="width: 80%;">
-                <div class="img-item item1" style="width: 136%;">
-                    <img src="assets/images/1.jpg" alt="" title="">
-
-                </div>
-                <div class="img-item">
-                    <img src="assets/images/2.jpg" alt="" title="">
-
-                </div>
-            </div>
-    </div>
-</section>
-
-<section class="cid-rzzaMRCLRX" id="footer2-9">
-
-
-
-
-
-    <div class="container">
-        <div class="media-container-row content mbr-white">
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <p class="mbr-text"><strong>營業時間：
-</strong><br><br>週二到週日早上九點到晚上六點
-<br></p>
-            </div>
-            <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <p class="mbr-text"><strong>地址&nbsp;：&nbsp;</strong><br>
-<br>立隆禮品 地址:台北市文山區興隆路一段15號
-<br>
-<br>
-<br><strong>聯絡方式&nbsp;：&nbsp;<br></strong>
-<br>電話 :02-8663 7281 <br><br></p>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="google-map"><iframe frameborder="0" style="border:0" src=
-                                              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.871966422121!2d121.5374270136671!3d25.00446614563163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa1c3677ab2f%3A0x1a1f39c2e93d0345!2zMTE25Y-w5YyX5biC5paH5bGx5Y2A6IiI6ZqG6Lev5LiA5q61MTXomZ8!5e0!3m2!1szh-TW!2stw!4v1611351883468!5m2!1szh-TW!2stw" 
- allowfullscreen="">
-                
-                
-              
-                </iframe></div>
-            </div>
-         
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal show">
+          <div class="hero-kicker">Neon Market / Taipei Flower District</div>
+          <h1 class="hero-title glitch" data-text="超溫馨水族館">超溫馨水族館</h1>
+          <p class="hero-subtitle">
+            立隆禮品 x 水族館，集結<span class="accent">工藝品、玩偶、資材、人造花、水族用品</span>，
+            由 <strong>超親切的林老闆</strong> 為您服務。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#info">導航到店</a>
+            <a class="btn btn-secondary" href="tel:0286637281">立即撥打 02-8663-7281</a>
+          </div>
+          <div class="counter" aria-live="polite">
+            <span class="counter-label">Visitor Count</span>
+            <span class="counter-value" id="visitorCount">載入中...</span>
+          </div>
         </div>
 
-    </div>
-</section>
-
-<section once="footers" class="cid-rznN35r9It" id="footer6-c">
-
-
-
-
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                
-                   <p>  <a href=" https://scott93723.github.io/Meeting-Health.com//">實體店面獨家販售常香健純天然茶葉芳香袋 </a></p>
-                <p>    <a href="https://www.pcstore.com.tw/lilung/">PCHOME商店街-天天好運網 </a></p>    
-              <p>    <a href="https://github.com/scott93723/lilung_APP_Download/raw/main/com.lilung.appstore-2.0-sameapk.com.apk">立隆App下載 </a></p>
-                  
-                    本網站由<a href="https://scott93723.github.io/Knowledge-Enterprise-Co-Ltd.com/" class="text-success">弘道實業有限公司</a>維護製作
-
-                </p>
+        <aside class="hero-panel reveal">
+          <div class="status-grid">
+            <div class="status-card">
+              <div class="status-label">營業時間</div>
+              <div class="status-value">週二到週日 09:00 - 18:00</div>
             </div>
+            <div class="status-card">
+              <div class="status-label">店鋪座標</div>
+              <div class="status-value">台北市文山區興隆路一段15號</div>
+            </div>
+            <div class="status-card">
+              <div class="status-label">通訊頻道</div>
+              <div class="status-value">02-8663 7281</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-tag">Inventory / Services</div>
+            <h2 class="section-title">各式工藝品、玩偶、資材、人造花、水族</h2>
+          </div>
+          <p class="section-copy">保留原本站點重點資訊，改造成未來霓虹視覺。來店可直接選購禮品、水族用品與陳列素材。</p>
         </div>
+        <div class="service-grid">
+          <article class="panel reveal">
+            <h3>禮品工藝專區</h3>
+            <p>工藝品、擺飾、特色小物與節慶選品，適合送禮與空間點綴。</p>
+          </article>
+          <article class="panel reveal">
+            <h3>水族補給模組</h3>
+            <p>水族相關用品、資材與展示需求一次整合，打造舒適水中世界。</p>
+          </article>
+          <article class="panel reveal">
+            <h3>親切店主支援</h3>
+            <p>現場由林老闆提供介紹與建議，挑選更有效率、更安心。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-tag">Visual Feed</div>
+            <h2 class="section-title">台北花市最強水族館</h2>
+          </div>
+          <p class="section-copy">保留原有現場照片展示，讓訪客先快速感受店面氛圍。</p>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-card reveal">
+            <img src="assets/images/1.jpg" alt="立隆禮品水族館現場照片 1">
+            <span>Market Scene 01</span>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="assets/images/2.jpg" alt="立隆禮品水族館現場照片 2">
+            <span>Market Scene 02</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-tag">Store Data</div>
+            <h2 class="section-title">店鋪資訊</h2>
+          </div>
+          <p class="section-copy">原本的營業時間、地址、電話與 Google 地圖功能完整保留。</p>
+        </div>
+        <div class="info-grid">
+          <article class="panel reveal">
+            <h3>營運資訊</h3>
+            <div class="meta-list">
+              <div class="meta-item">
+                <strong>營業時間</strong>
+                <div>週二到週日早上九點到晚上六點</div>
+              </div>
+              <div class="meta-item">
+                <strong>地址</strong>
+                <div>立隆禮品 地址：台北市文山區興隆路一段15號</div>
+              </div>
+              <div class="meta-item">
+                <strong>聯絡方式</strong>
+                <div><a href="tel:0286637281">電話：02-8663 7281</a></div>
+              </div>
+            </div>
+          </article>
+          <article class="panel reveal">
+            <iframe
+              class="map-frame"
+              title="立隆禮品地圖"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.871966422121!2d121.5374270136671!3d25.00446614563163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa1c3677ab2f%3A0x1a1f39c2e93d0345!2zMTE25Y-w5YyX5biC5paH5bGx5Y2A6IiI6ZqG6Lev5LiA5q61MTXomZ8!5e0!3m2!1szh-TW!2stw!4v1611351883468!5m2!1szh-TW!2stw">
+            </iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-tag">External Channels</div>
+            <h2 class="section-title">延伸連結</h2>
+          </div>
+          <p class="section-copy">保留原本站既有外部功能入口與維護資訊。</p>
+        </div>
+        <div class="link-grid">
+          <a class="link-card reveal" href="https://scott93723.github.io/Meeting-Health.com//" target="_blank" rel="noopener noreferrer">
+            <h3>常香健純天然茶葉芳香袋</h3>
+            <p>實體店面獨家販售商品頁面。</p>
+          </a>
+          <a class="link-card reveal" href="https://www.pcstore.com.tw/lilung/" target="_blank" rel="noopener noreferrer">
+            <h3>PChome 商店街</h3>
+            <p>天天好運網線上商店入口。</p>
+          </a>
+          <a class="link-card reveal" href="https://github.com/scott93723/lilung_APP_Download/raw/main/com.lilung.appstore-2.0-sameapk.com.apk" target="_blank" rel="noopener noreferrer">
+            <h3>立隆 App 下載</h3>
+            <p>Android APK 安裝檔下載。</p>
+          </a>
+        </div>
+        <div class="panel reveal" style="margin-top:1.2rem;">
+          <h3>網站維護</h3>
+          <p>本網站由 <a href="https://scott93723.github.io/Knowledge-Enterprise-Co-Ltd.com/" target="_blank" rel="noopener noreferrer">弘道實業有限公司</a> 維護製作。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-mark">© 2077 龍蝦王. SYSTEM ONLINE.</div>
+      <div class="footer-note">Lucky365 Cyberpunk Static Interface / 繁體中文版本</div>
     </div>
-</section>
+  </footer>
 
+  <script>
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dropdown/js/nav-dropdown.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/theme/js/script.js"></script>
+      reveals.forEach((el, index) => {
+        if (!el.classList.contains('show')) {
+          el.style.transitionDelay = `${Math.min(index * 70, 360)}ms`;
+        }
+        observer.observe(el);
+      });
+    })();
 
+    (function () {
+      const el = document.getElementById('visitorCount');
+      const endpoint = 'https://counterapi.dev/api/lucky365-2077/visits/up';
 
+      fetch(endpoint)
+        .then((res) => {
+          if (!res.ok) throw new Error('counter api failed');
+          return res.json();
+        })
+        .then((data) => {
+          const value = data.count ?? data.value ?? data.up_count ?? '--';
+          el.textContent = typeof value === 'number' ? value.toLocaleString('zh-TW') : value;
+        })
+        .catch(() => {
+          el.textContent = '離線';
+        });
+    })();
+  </script>
 </body>
 </html>
